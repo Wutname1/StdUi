@@ -1,0 +1,12 @@
+{
+  "editor.formatOnSave": false,
+  "Lua.diagnostics.globals": [
+    "GameFontNormalLarge",
+    "GameFontNormal",
+    "GameTooltip",
+    "BackdropTemplateMixin",
+    "ElvUI",
+    "COPPER_PER_GOLD",
+    "COPPER_PER_SILVER"
+  ]
+}
