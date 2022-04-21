@@ -1,4 +1,4 @@
---- @type StdUi
+--- @class StdUi
 local StdUi = LibStub and LibStub('StdUi', true);
 if not StdUi then
 	return
@@ -15,6 +15,11 @@ local SquareButtonCoords = {
 	DELETE = { 0.01562500,    0.20312500,     0.01562500,     0.20312500};
 };
 
+---@class StdUi_SquareButton : Button, SquareButtonMethods
+---@field icon Texture
+---@field iconDisabled Texture
+
+---@class SquareButtonMethods
 local SquareButtonMethods = {
 	SetIconDisabled = function(self, texture, iconWidth, iconHeight)
 		self.iconDisabled = self.stdUi:Texture(self, iconWidth, iconHeight, texture);
@@ -36,8 +41,8 @@ local SquareButtonMethods = {
 	end
 };
 
-function StdUi:SquareButton(parent, width, height, icon, name)
-	local button = CreateFrame('Button', name, parent);
+function StdUi:SquareButton(parent, width, height, icon)
+	local button = CreateFrame('Button', name, parent); ---@type StdUi_SquareButton
 	button.stdUi = self;
 
 	self:InitWidget(button);
