@@ -16,7 +16,7 @@ end
 ----------------------------------------------------
 --- ScrollFrame
 ----------------------------------------------------
-
+---@class ScrollBarEvents
 StdUi.ScrollBarEvents = {
 
 	UpDownButtonOnClick = function(self)
@@ -36,6 +36,7 @@ StdUi.ScrollBarEvents = {
 	end
 };
 
+---@class ScrollFrameEvents
 StdUi.ScrollFrameEvents = {
 	OnMouseWheel         = function(self, value, scrollBar)
 		scrollBar = scrollBar or self.scrollBar;
@@ -107,6 +108,7 @@ StdUi.ScrollFrameEvents = {
 	end
 }
 
+---@class ScrollFrameMethods
 StdUi.ScrollFrameMethods = {
 	SetScrollStep = function(self, scrollStep)
 		scrollStep = round(scrollStep);
@@ -138,7 +140,7 @@ StdUi.ScrollFrameMethods = {
 };
 
 function StdUi:ScrollFrame(parent, width, height, scrollChild)
-	local panel = self:Panel(parent, width, height);
+	local panel = self:Panel(parent, width, height); ---@class ScrollFrame : Frame, ScrollFrameMethods, ScrollFrameEvents
 	panel.stdUi = self;
 	panel.offset = 0;
 	panel.scrollBarWidth = 16;

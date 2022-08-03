@@ -7,6 +7,9 @@
     "BackdropTemplateMixin",
     "ElvUI",
     "COPPER_PER_GOLD",
-    "COPPER_PER_SILVER"
+    "COPPER_PER_SILVER",
+    "ChatFontNormal",
+    "OKAY",
+    "CANCEL"
   ]
 }

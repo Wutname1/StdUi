@@ -74,7 +74,7 @@ end
 ----------------------------------------------------
 --- Tooltip
 ----------------------------------------------------
-
+---@class FrameTooltipMethods
 local FrameTooltipMethods = {
 	SetText         = function(self, text, r, g, b)
 		if r and g and b then
@@ -127,7 +127,7 @@ local FrameTooltipEvents = {
 };
 
 function StdUi:FrameTooltip(owner, text, tooltipName, anchor, automatic, manualPosition)
-	local tip;
+	local tip; ---@class FrameTooltip : Frame, FrameTooltipMethods
 
 	if tooltipName and self.frameTooltips[tooltipName] then
 		tip = self.frameTooltips[tooltipName];
